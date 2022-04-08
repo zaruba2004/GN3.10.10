@@ -208,14 +208,14 @@ module.controller('gnsSearchTopEntriesController', [
         $location.path('/search').search({'any': any});
       };
 
-      $scope.testClick = function() {
-        console.log('test')
-        let url = '{portal}/api/customstyle'
-        $http.get(url).
-        success(function(response) {
-          console.log(response)
-        })
-      }
+      // $scope.testClick = function() {
+      //   console.log('test')
+      //   let url = '{portal}/api/customstyle'
+      //   $http.get(url).
+      //   success(function(response) {
+      //     console.log(response)
+      //   })
+      // }
 
       $scope.backToSearch = function() {
         gnSearchLocation.restoreSearch();

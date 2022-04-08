@@ -150,7 +150,7 @@
     -->
     <init-param>
       <param-name>mode</param-name>
-      <param-value>DENY</param-value>
+      <param-value>SAMEORIGIN</param-value>
     </init-param>
     <!-- Allowed url. Used in ALLOW-FROM mode only -->
     <!--<init-param>
@@ -395,7 +395,7 @@
     <servlet-class>org.mitre.dsmiley.httpproxy.URITemplateProxyServlet</servlet-class>
     <init-param>
       <param-name>targetUri</param-name>
-      <param-value>${es.url}/${es.index.features}/{_}</param-value>
+      <param-value>http://localhost:9200/gn-features/</param-value>
     </init-param>
     <init-param>
       <param-name>log</param-name>
@@ -412,7 +412,7 @@
     <servlet-class>org.mitre.dsmiley.httpproxy.URITemplateProxyServlet</servlet-class>
     <init-param>
       <param-name>targetUri</param-name>
-      <param-value>${es.url}/${es.index.records}/{_}</param-value>
+      <param-value>http://localhost:9200/gn-records/</param-value>
     </init-param>
     <init-param>
       <param-name>log</param-name>
@@ -430,7 +430,7 @@
     <servlet-class>org.mitre.dsmiley.httpproxy.URITemplateProxyServlet</servlet-class>
     <init-param>
       <param-name>targetUri</param-name>
-      <param-value>${es.url}/${es.index.records_public}/{_}</param-value>
+      <param-value>http://localhost:9200/gn-records-public/</param-value>
     </init-param>
     <init-param>
       <param-name>log</param-name>
@@ -447,7 +447,7 @@
     <servlet-class>org.mitre.dsmiley.httpproxy.ProxyServlet</servlet-class>
     <init-param>
       <param-name>targetUri</param-name>
-      <param-value>${kb.url}</param-value>
+      <param-value>http://localhost:5601</param-value>
     </init-param>
     <init-param>
       <param-name>log</param-name>
@@ -504,6 +504,6 @@
 
   <context-param>
     <param-name>spring.profiles.active</param-name>
-    <param-value>${es.spring.profile}</param-value>
+    <param-value>es</param-value>
   </context-param>
 </web-app>
