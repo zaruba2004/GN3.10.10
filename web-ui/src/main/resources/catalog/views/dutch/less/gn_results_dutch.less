@@ -321,7 +321,7 @@ ul.gn-resultview {
     min-width: 300px;
     // max-width: 500px;
     width: calc(~"100% - 15px");
-    height: 21.5em;
+    height: 24.5em;
     padding: 14px;
     .gn-md-details {
       color: #6a6a6a;
@@ -406,10 +406,17 @@ ul.gn-resultview {
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (tablets, 768px and up) */
+@media (max-width: @screen-sm-min) {
+  .gn-grid-for-fixed-map {
+    padding: 0;
+  }
+}
+
+
 @media (min-width: @screen-sm-min) {
   ul.gn-resultview li.gn-grid {
     width: calc(~"100% - 15px");
-  }
+  }  
 }
 
 /* Medium devices (desktops, 992px and up) */

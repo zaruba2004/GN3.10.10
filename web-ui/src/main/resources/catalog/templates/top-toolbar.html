@@ -45,7 +45,7 @@
         <a data-gn-active-tb-item="{{gnCfg.mods.search.appUrl}}"
           title="{{'search' | translate}}">
           <i class="fa fa-fw fa-search"></i>
-          <span translate class="hidden-xs">search</span>
+          <span translate class="hidden-sx">search</span>
         </a>
       </li>
       <li class="gn-menuitem-xs" data-ng-if="gnCfg.mods.map.enabled">
@@ -139,9 +139,9 @@
     </ul>
 
     <div class="navbar-form navbar-right language-switcher">
-      <span class="gn-menuheader-xs visible-xs"
+      <!-- <span class="gn-menuheader-xs visible-xs"
             data-ng-if="!authenticated && service !== 'catalog.signin' && service !== 'new.account' && (!shibbolethEnabled || (shibbolethEnabled && !shibbolethHideLogin))"
-            data-translate="">language</span>
+            data-translate="">language</span> -->
       <div data-gn-language-switcher="lang"
            data-langs="langs"
            data-lang-labels="langLabels">

@@ -56,6 +56,11 @@
   position:absolute;
   left: 0;
   width: calc(~"100vw - 6px");
+  @media (max-width: @screen-sm-min) {
+    position: relative;
+    width: calc(~"100vw - 15px");
+    left: -7px;
+  }
 }
 .mappage {
   padding-bottom: 1px;
@@ -65,6 +70,11 @@
     width: calc(~"100% - 40px");
     height: auto;
     margin: 20px 20px 80px 20px;
+    @media (max-width: @screen-sm-min) {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
   [ol-map] {
     height: calc(~"100vh - 199px");
     // height: calc(~"100vh - 130px"); //for fullscreen

@@ -67,6 +67,12 @@
   .gn-logo-link {
     .gn-logo {
       margin-top: -13px;
+      @media (max-width: @screen-sm-min) {
+        margin-top: 0;
+      }
+      @media (max-width: @screen-xs-min) {
+        margin-top: 0;
+      }
     }
   }
   .dropdown-menu {
