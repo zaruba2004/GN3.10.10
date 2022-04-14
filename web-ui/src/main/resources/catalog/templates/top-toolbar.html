@@ -5,7 +5,7 @@
            alt="{{'siteLogo' | translate}}"
            data-ng-src="{{gnUrl}}../images/logos/{{info['node/id'] || info['system/site/siteId']}}.png?random{{info['system/site/lastUpdate']}}"/>
     </a>
-    <a class="hidden-sm hidden-md hidden-lg btn btn-link pull-left"
+    <a class="hidden-xs hidden-sm hidden-md hidden-lg btn btn-link pull-left"
        data-gn-active-tb-item="{{gnCfg.mods.home.appUrl}}">
       <span class="gn-name"
             data-ng-class="authenticated && user.isEditorOrMore() ? 'gn-truncate' : ''"
@@ -25,6 +25,16 @@
     </button>
   </div>
   <div id="navbar" class="navbar-collapse collapse">
+    <div class="navbar-form navbar-right language-switcher">
+      <!-- <span class="gn-menuheader-xs visible-xs"
+            data-ng-if="!authenticated && service !== 'catalog.signin' && service !== 'new.account' && (!shibbolethEnabled || (shibbolethEnabled && !shibbolethHideLogin))"
+            data-translate="">language</span> -->
+      <div data-gn-language-switcher="lang"
+           data-langs="langs"
+           data-lang-labels="langLabels">
+      </div>
+    </div>
+
     <ul class="nav navbar-nav gn-menu-xs" role="menu">
       <li class="clearfix hidden-xs" data-ng-if="gnCfg.mods.home.enabled">
         <a class="pull-left gn-logo-link" 
@@ -137,17 +147,7 @@
       </li>
       <li gn-static-pages-list-viewer data-section="top" data-language="{{lang}}" />
     </ul>
-
-    <div class="navbar-form navbar-right language-switcher">
-      <!-- <span class="gn-menuheader-xs visible-xs"
-            data-ng-if="!authenticated && service !== 'catalog.signin' && service !== 'new.account' && (!shibbolethEnabled || (shibbolethEnabled && !shibbolethHideLogin))"
-            data-translate="">language</span> -->
-      <div data-gn-language-switcher="lang"
-           data-langs="langs"
-           data-lang-labels="langLabels">
-      </div>
-    </div>
-
+    
     <ul data-ng-if="gnCfg.mods.signin.enabled"
         class="nav navbar-nav navbar-right username-dropdown">
       <li class="dropdown dropdown-hover open" data-ng-show="authenticated">
