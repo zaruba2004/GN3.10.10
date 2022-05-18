@@ -45,7 +45,7 @@
           return {
             onClick: function(scope, loc, map) {
             	// get the details from the lookup service
-              var url = `https://address-services.nca.by/belgeodezia/api/address/${loc.id}`;
+              var url = 'https://address-services.nca.by/belgeodezia/api/address/'+loc.id;
               $http.get(url).
               success(function(response) {
 
@@ -54,7 +54,7 @@
                   var dataPointX = response.result[0].xcoord;
                 	var mapProjection = map.getView().getProjection().getCode();
                   // turn it into a geometry and convert
-                  var geom = new ol.format.WKT().readGeometry(`POINT(${dataPointY} ${dataPointX})`).transform('EPSG:4326', mapProjection);
+                  var geom = new ol.format.WKT().readGeometry('POINT('+dataPointY+' '+dataPointX+')').transform('EPSG:4326', mapProjection);
                   // zoom to the coordinates
                   // 
                   // zoom depends on type
@@ -124,7 +124,7 @@
                   scope.results.push({
                     id: item.code,
                     name: item.shortName,
-                    type: item.type,
+                    type: item.type
                     // score: item.score
                   });
                 });

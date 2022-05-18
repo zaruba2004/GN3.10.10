@@ -274,6 +274,8 @@
 			<xs:enumeration value="structure"/>
 			<xs:enumeration value="transportation"/>
 			<xs:enumeration value="utilitiesCommunication"/>
+			<xs:enumeration value="history"/>
+			<xs:enumeration value="extraTerrestrial"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<!-- ........................................................................ -->

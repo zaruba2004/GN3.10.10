@@ -190,7 +190,7 @@
 
       <!-- It should be one but if one keyword is found in more
           thant one thesaurus, then each will be processed.-->
-      <xsl:for-each select="$keyword/response/keyword">
+      <xsl:for-each select="$keyword/response/keyword[1]">
         <xsl:if test="geo">
           <mri:extent>
             <xsl:copy-of select="geonet:make-iso19115-3-extent(geo/west, geo/south, geo/east, geo/north, $word)"/>

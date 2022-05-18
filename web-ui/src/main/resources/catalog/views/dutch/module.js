@@ -222,7 +222,7 @@ module.controller('gnsSearchTopEntriesController', [
       };
 
       var updateSizeSearchMap = function() {
-        setTimeout(() => {
+        setTimeout(function() {
           searchMap.updateSize();
         }, 300)
       };
